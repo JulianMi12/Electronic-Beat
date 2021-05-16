@@ -32,10 +32,18 @@ body {
     margin-bottom: 40px;
 }
 
+.origen {
+    color: #474cb1);
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
 .social {
     position: fixed;
-    left: 0;
-    top: 700px;
+    top: 600px;
     z-index: 2000;
 }
 
@@ -62,15 +70,15 @@ body {
     background: #00abf0;
 }
 
-.social ul li .icon-googleplus {
-    background: #d95232;
+.social ul li .icon-instagram {
+    background: #8c29b9;
 }
 
-.social ul li .icon-pinterest {
-    background: #ae181f;
+.social ul li .icon-whatsapp {
+    background: #18ae45;
 }
 
-.social ul li .icon-mail {
+.social ul li .icon-mail2 {
     background: #666666;
 }
 
@@ -84,6 +92,12 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media (max-width:767px) {
+    .social {
+        display: none;
     }
 }
 
