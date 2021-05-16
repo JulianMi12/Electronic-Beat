@@ -1,0 +1,29 @@
+.divtittle {
+    text-align: center;
+    padding-top: 2%;
+}
+
+.divsubt {
+    display: none;
+}
+
+.center h1 {
+    font-size: 30px;
+}
+
+@media (min-width:992px) {
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width:992px) {
+    .divsubt {
+        display: block;
+    }
+    .divtittle {
+        display: none;
+    }
+}
