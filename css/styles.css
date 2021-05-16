@@ -91,9 +91,11 @@ body {
     .divsubt {
         display: block;
     }
+
     .divsubt img {
         width: 90px;
     }
+
     .divtittle {
         display: none;
     }
@@ -101,4 +103,24 @@ body {
 
 .origen {
     text-align: center;
+}
+
+.origen2 {
+    text-align: center;
+    font-size: 70px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.imgs {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
 }
