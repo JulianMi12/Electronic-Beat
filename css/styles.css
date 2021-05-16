@@ -1,17 +1,33 @@
+@font-face {
+    font-family: 'Lemon/Milk Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Lemon/Milk Regular'), url('../fonts/LemonMilk.woff') format('woff');
+}
+
+body {
+    font-family: "Lemon/Milk Regular";
+}
+
 .divtittle {
     text-align: center;
     padding-top: 2%;
 }
 
+.divtittle {
+    font-size: 35px;
+}
+
 .divsubt {
     display: none;
+    font-size: 25px;
 }
 
 .center h1 {
     font-size: 30px;
 }
 
-@media (min-width:992px) {
+@media (min-width:991px) {
     .center {
         display: flex;
         align-items: center;
@@ -19,9 +35,12 @@
     }
 }
 
-@media (max-width:992px) {
+@media (max-width:991px) {
     .divsubt {
         display: block;
+    }
+    .divsubt img {
+        width: 90px;
     }
     .divtittle {
         display: none;
