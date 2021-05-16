@@ -66,6 +66,16 @@ body {
     -webkit-tap-highlight-color: transparent
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+    background: rgb(19, 19, 19);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(172, 160, 160);
+    border-radius: 5px;
+}
+
 hr {
     margin: 1rem 0;
     color: inherit;
