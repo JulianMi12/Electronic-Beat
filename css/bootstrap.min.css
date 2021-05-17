@@ -183,8 +183,8 @@ address {
     line-height: inherit
 }
 
-ol,
-ul {
+navbar-nav ol,
+navbar-nav ul {
     display: flex;
     justify-content: center;
 }
@@ -208,8 +208,8 @@ ul {
 }
 
 @media (max-width:991px) {
-    ol,
-    ul {
+    navbar-nav ol,
+    navbar-nav ul {
         float: right;
         text-align: right;
     }
