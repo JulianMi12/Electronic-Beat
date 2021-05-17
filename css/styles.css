@@ -43,7 +43,7 @@ body {
 
 .social {
     position: fixed;
-    top: 600px;
+    top: 650px;
     z-index: 2000;
 }
 
@@ -105,11 +105,9 @@ body {
     .divsubt {
         display: block;
     }
-
     .divsubt img {
         width: 90px;
     }
-
     .divtittle {
         display: none;
     }
