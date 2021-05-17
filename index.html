@@ -5,66 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Electronic Beat</title>
 </head>
 
 <body>
-    <header class="bg-primary">
-        <div class="divtittle">
-            <h1>ELECTRONIC BEAT</h1>
+    <div class="container">
+        <div class="navbar">
+            <img src="images/Logo.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">FAVORITOS</a></li>
+                <li><a href="electronica.html">ELECTRONICA</a></li>
+                <li><a href="#">MUSICA</a></li>
+                <li><a href="#">ACERCA DE</a></li>
+            </ul>
         </div>
-        <div class="center">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <div class="container-fluid">
-                    <div class="divsubt">
-                        <a class="navbar-brand" href="#">ELECTRONIC BEAT</a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarColor01">
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="index.html">
-                                    <p>HOME <i class="fas fa-home"> </i></p>
-                                    <span class="visually-hidden">(current)</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <p>FAVORITO <i class="fas fa-heart"> </i></p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="electronica.html">
-                                    <p>ELECTRONICA <i class="fas fa-compass"> </i></p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <p>MUSICA <i class="fas fa-headphones-alt"> </i></p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <p>ACERCA DE <i class="fas fa-pencil-alt"> </i></p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+        <div class="content">
+            <div class="left-col">
+                <h1>LA<br>VERDADERA<br>MUSICA</h1>
+            </div>
+            <div class="right-col">
+                <h1>TEN UNA<br>PRUEBA</h1><br>
+                <img src="images/index/play.png" id="icon">
+            </div>
         </div>
-    </header>
+    </div>
+    <audio id="song">
+        <source src="images/index/song.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        var song = document.getElementById("song");
+        var icon = document.getElementById("icon");
 
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/prismjs/prism.js" data-manual></script>
-    <script src="js/custom.js"></script>
+        icon.onclick = function() {
+            if (song.paused) {
+                song.play();
+                icon.src = "images/index/pause.png";
+            } else {
+                song.pause();
+                icon.src = "images/index/play.png";
+            }
+        }
+    </script>
 </body>
 
 </html>

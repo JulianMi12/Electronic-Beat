@@ -3101,7 +3101,7 @@ textarea.form-control.is-invalid {
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
@@ -3110,7 +3110,6 @@ textarea.form-control.is-invalid {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: transparent;
     border: 1px solid transparent;
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -3125,7 +3124,7 @@ textarea.form-control.is-invalid {
 }
 
 .btn:hover {
-    color: #fff
+    color: var(--bs-primary);
 }
 
 .btn-check:focus+.btn,
@@ -3148,7 +3147,7 @@ fieldset:disabled .btn {
 }
 
 .btn-primary:hover {
-    color: #fff;
+    color: var(--bs-primary);
     background-color: #2f4d6c;
     border-color: #2c4866
 }
@@ -4855,12 +4854,30 @@ fieldset:disabled .btn {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-width: 0;
+    min-height: 545px;
     word-wrap: break-word;
     background-color: #303030;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
-    border-radius: .25rem
+    border-radius: .25rem;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+@media (max-width:480px) {
+    .card {
+        min-width: auto;
+    }
+    .card-text {
+        font-size: 15px;
+    }
+}
+
+@media (min-width:480px) {
+    .card {
+        margin-left: 20px;
+        min-width: 400px;
+    }
 }
 
 .card>hr {
@@ -4918,7 +4935,7 @@ fieldset:disabled .btn {
 }
 
 .card-header {
-    padding: .5rem 1rem;
+    padding: 1rem 1rem;
     margin-bottom: 0;
     background-color: #444;
     border-bottom: 1px solid rgba(0, 0, 0, .125)
