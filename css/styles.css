@@ -41,6 +41,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.main-text {
+    font-size: 30px;
+}
+
 .social {
     position: fixed;
     top: 650px;
@@ -110,6 +114,12 @@ body {
 .origen {
     text-align: center;
     color: #474cb1;
+    margin: 35px 0;
+}
+
+.main-tittle {
+    text-align: center;
+    color: rgb(37, 150, 190);
     margin: 35px 0;
 }
 

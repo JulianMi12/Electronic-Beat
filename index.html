@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/Logo.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index.css">
     <title>Electronic Beat</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="navbar">
+    <div class="containerr">
+        <div class="navbarr">
             <a href="index.html"><img src="images/Logo.png" alt="Logo" class="logo"></a>
             <ul>
                 <li><a href="#">HOME</a></li>
@@ -35,20 +37,52 @@
     <audio id="song">
         <source src="images/index/song.mp3" type="audio/mp3">
     </audio>
-    <script>
-        var song = document.getElementById("song");
-        var icon = document.getElementById("icon");
+    <div class="center">
+        <hr class="barra">
+    </div>
+    <div class="container">
+        <div class="row">
+            <h1 class="main-tittle">BIENVENIDOS</h1>
+            <p class="main-text">Todos hemos escuchado en algún momento la muy conocida música electrónica, canciones de djs muy importantes tales como: Tiesto, David Guetta, Martin Garrix, Dimitri Vegas & Like Mike, Alan Walker, entre otros. Les pregunto, saben cual es su
+                historia, cómo evolucionó con el paso del tiempo, sus géneros principales, sus máximos exponentes, los eventos más importantes y qué vocabulario se usa en este campo musical. Mi nombre es Alvaro Valladares, un gran fanático de la música
+                electrónica, te invito a que me acompañes a conocer su amplia historia.</p>
 
-        icon.onclick = function() {
-            if (song.paused) {
-                song.play();
-                icon.src = "images/index/pause.png";
-            } else {
-                song.pause();
-                icon.src = "images/index/play.png";
-            }
-        }
-    </script>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="First slide" />
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Second slide" />
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" data-src="holder.js/800x400?auto=yes&amp;bg=555&amp;fg=333&amp;text=Third slide" alt="Third slide" />
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-5 bg-dark ">
+        <div class="containerBlack ">
+            <p class="m-0 text-center text-white ">Copyright &copy; Fundación Universitaria Konrad Lorenz 2021</p>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
 </body>
 
 </html>

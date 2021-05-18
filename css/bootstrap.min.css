@@ -82,11 +82,6 @@ hr {
     color: inherit;
     background-color: currentColor;
     border: 0;
-    opacity: .25
-}
-
-hr:not([size]) {
-    height: 1px
 }
 
 .h1,

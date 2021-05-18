@@ -11,7 +11,22 @@
     font-family: "Lemon/Milk Regular";
 }
 
-.container {
+body {
+    background-color: rgba(228, 228, 228, 255);
+}
+
+body::-webkit-scrollbar {
+    width: 11px;
+    background: var(--bs-primary);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #fff;
+    border: 2px solid var(--bs-primary);
+    border-radius: 5px;
+}
+
+.containerr {
     height: 100vh;
     width: 100%;
     background-image: url(../images/index/index.jpg);
@@ -20,7 +35,7 @@
     position: relative;
 }
 
-.navbar {
+.navbarr {
     width: 88%;
     margin: auto;
     padding: 15px 0;
@@ -33,13 +48,13 @@
     cursor: pointer;
 }
 
-.navbar ul li {
+.navbarr ul li {
     list-style: none;
     display: inline-block;
     margin: 35px 15px;
 }
 
-.navbar ul li a {
+.navbarr ul li a {
     text-decoration: none;
     font-size: 15px;
     color: #375a7f;
@@ -76,8 +91,32 @@
     float: right;
 }
 
+.main-tittle {
+    font-size: 60px;
+}
+
+.main-text {
+    text-align: center;
+    font-size: 25px;
+}
+
 #icon {
     float: right;
     width: 80px;
     cursor: pointer;
+}
+
+hr {
+    width: 90%;
+    height: 2px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    background-color: rgba(178, 38, 74, 255);
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
