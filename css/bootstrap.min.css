@@ -203,8 +203,8 @@ navbar-nav ul {
 }
 
 @media (max-width:991px) {
-    navbar-nav ol,
-    navbar-nav ul {
+    .navbar ol,
+    .navbar ul {
         float: right;
         text-align: right;
     }
@@ -4348,6 +4348,14 @@ fieldset:disabled .btn {
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out
 }
 
+.nav-link {
+    display: block;
+    padding: .5rem 2rem;
+    color: #00bc8c;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out
+}
+
 @media (prefers-reduced-motion:reduce) {
     .nav-link {
         transition: none
@@ -4511,7 +4519,6 @@ fieldset:disabled .btn {
     -ms-flex-positive: 1;
     flex-grow: 1;
     -ms-flex-align: center;
-    align-items: center
 }
 
 .navbar-toggler {
@@ -4647,6 +4654,32 @@ fieldset:disabled .btn {
         flex-basis: auto
     }
     .navbar-expand-lg .navbar-toggler {
+        display: none
+    }
+    .navbar-expand-lgg {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        font-size: 27px;
+    }
+    .navbar-expand-lgg .navbar-nav {
+        -ms-flex-direction: row;
+        flex-direction: row
+    }
+    .navbar-expand-lgg .navbar-nav .dropdown-menu {
+        position: absolute
+    }
+    .navbar-expand-lgg .navbar-nav-scroll {
+        overflow: visible
+    }
+    .navbar-expand-lgg .navbar-collapse {
+        display: -ms-flexbox!important;
+        display: flex!important;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto
+    }
+    .navbar-expand-lgg .navbar-toggler {
         display: none
     }
 }
@@ -4787,6 +4820,10 @@ fieldset:disabled .btn {
     background-image: url("../images/MenuWhite.png");
 }
 
+.navbar-light .navbar-toggler-icon-B {
+    background-image: url("../images/MenuBlue.png");
+}
+
 .navbar-light .navbar-text {
     color: rgba(34, 34, 34, .7)
 }
@@ -4831,6 +4868,10 @@ fieldset:disabled .btn {
 
 .navbar-dark .navbar-toggler-icon {
     background-image: url("../images/MenuWhite.png");
+}
+
+.navbar-dark .navbar-toggler-iconn {
+    background-image: url("../images/MenuBlue.png");
 }
 
 .navbar-dark .navbar-text {
