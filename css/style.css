@@ -2,18 +2,22 @@
     outline: none;
 }
 
+*,
+::after,
+::before {
+    box-sizing: unset;
+}
+
 body {
-    font-family: Helvetica, Arial;
     margin: 0;
-    background-color: #ffeff5;
 }
 
 #app-cover {
     position: absolute;
-    top: 50%;
+    bottom: 50%;
     right: 0;
     left: 0;
-    width: 430px;
+    width: 100%;
     height: 100px;
     margin: -4px auto;
 }
@@ -269,8 +273,6 @@ body {
 #player-controls {
     width: 250px;
     height: 100%;
-    margin: 0 5px 0 141px;
-    float: right;
     overflow: hidden;
 }
 
@@ -324,4 +326,30 @@ body {
     border-radius: 4px;
     box-shadow: 0 10px 20px -5px rgba(174, 95, 135, 0.86);
     z-index: 125;
+}
+
+@media (min-width:402px) {
+    #player-controls {
+        margin: 0 5px 0 141px;
+        float: right;
+    }
+    #app-cover {
+        top: 91%;
+    }
+}
+
+@media (max-width:402px) {
+    #album-art {
+        display: none;
+    }
+    #player-controls {
+        margin-left: 15px;
+    }
+    #app-cover {
+        top: 84%;
+    }
+    #player-track {
+        top: -92px;
+        padding: 10px 10px 10px 10px;
+    }
 }
