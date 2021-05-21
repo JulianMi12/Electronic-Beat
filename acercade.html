@@ -77,7 +77,34 @@
             </div>
         </div>
     </div>
-    
+    <section class="form-registro">
+        <h2>Contactenos</h2>
+        <input class="controles" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required maxlength="5">
+        <input class="controles" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+        <input class="controles" type="text" name="telefono" id="telefono" onkeypress="return solon(event)" placeholder="Ingrese su Telefono" required minlength="7" pattern="[z0-9]+">
+        <script>
+       function solon(e){
+           key=e.keyCode || e.which;
+           teclado=String.fromCharCode(key);
+           numeros="0123456789";
+           especiales="8-37-38-46";
+           teclado_especial=false;
+           for(var i in especiales){
+               if(key==especiales [i]){
+                   teclado_especial=true;
+
+               }
+           }
+           if(numeros.indexOf(teclado)==-1 && !teclado_especial){
+               return false;
+           }
+       }
+        </script>
+        <textarea class="controles" name="texto" rows="9" cols="60" placeholder="Ingrese el Mensaje"required minlength="50" maxlength="200"></textarea>
+        <button type="button" class="btn btn-dark">Enviar</button>
+    </section>
+    <br> 
+    <br>
     <footer class="py-5 bg-dark ">
         <div class="social">
             <ul>
