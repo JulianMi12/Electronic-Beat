@@ -60,64 +60,94 @@
             </nav>
         </div>
     </header>
-    <div class="container">
+    <div id="div1" class="cp_oculta">
         <div class="row">
-            <div class="col-sm-2 col-md-4">
-
+            <div class="col-sm-2 col-md-2">
+                <div class="playlist">
+                    <h1>Playlist</h1>
+                    <ul>
+                        <li><input type="button" id="btn-1 " value="HOUSE " onclick="mostrarLista1() " /></li>
+                        <li><input type="button" id="btn-2 " value="DUBSTEP " onclick="mostrarLista2() " /></li>
+                        <li><input type="button" id="btn-3 " value="TECHNO " onclick="mostrarLista3() " /></li>
+                        <li><input type="button" id="btn-4 " value="TRANCE " onclick="mostrarLista4() " /></li>
+                        <li><input type="button" id="btn-5 " value="EDM " onclick="mostrarLista5() " /></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-sm-10 col-md-8">
-
+            <div class="col-sm-9 col-md-9">
+                <div class="songs">
+                    <div class="tittle">
+                        <h1>HOUSE</h1>
+                        <p>Canciones: 9</p>
+                    </div>
+                    <div class="songList">
+                        <ul>
+                            <li>https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg</li>
+                            <li>https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg</li>
+                            <li>https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg</li>
+                            <li>https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg</li>
+                            <li>https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg</li>
+                            <li>https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg</li>
+                            <li>https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg</li>
+                            <li>https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg</li>
+                            <li>https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg</li>
+                            <li>https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg</li>
+                            <li>https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+        <footer>
+            <div id="app-cover">
+                <div id="player">
+                    <div id="player-track">
+                        <div id="album-name"></div>
+                        <div id="track-name"></div>
+                        <div id="track-time">
+                            <div id="current-time"></div>
+                            <div id="track-length"></div>
+                        </div>
+                        <div id="s-area">
+                            <div id="ins-time"></div>
+                            <div id="s-hover"></div>
+                            <div id="seek-bar"></div>
+                        </div>
+                    </div>
+                    <div id="player-content">
+                        <div id="album-art">
+                            <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg" class="active" id="_1">
+                            <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg" id="_2">
+                            <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
+                            <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
+                            <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
+                            <div id="buffer-box">Buffering ...</div>
+                        </div>
+                        <div id="player-controls">
+                            <div class="control">
+                                <div class="button" id="play-previous">
+                                    <i class="fas fa-backward"></i>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="button" id="play-pause-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="button" id="play-next">
+                                    <i class="fas fa-forward"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-    <footer>
-        <div id="app-cover">
-            <div id="player">
-                <div id="player-track">
-                    <div id="album-name"></div>
-                    <div id="track-name"></div>
-                    <div id="track-time">
-                        <div id="current-time"></div>
-                        <div id="track-length"></div>
-                    </div>
-                    <div id="s-area">
-                        <div id="ins-time"></div>
-                        <div id="s-hover"></div>
-                        <div id="seek-bar"></div>
-                    </div>
-                </div>
-                <div id="player-content">
-                    <div id="album-art">
-                        <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg" class="active" id="_1">
-                        <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg" id="_2">
-                        <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
-                        <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
-                        <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
-                        <div id="buffer-box">Buffering ...</div>
-                    </div>
-                    <div id="player-controls">
-                        <div class="control">
-                            <div class="button" id="play-previous">
-                                <i class="fas fa-backward"></i>
-                            </div>
-                        </div>
-                        <div class="control">
-                            <div class="button" id="play-pause-button">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                        <div class="control">
-                            <div class="button" id="play-next">
-                                <i class="fas fa-forward"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/j.js"></script>
+
+    <script src="js/jquery.min.js "></script>
+    <script src="js/j.js "></script>
 </body>
 
 </html>

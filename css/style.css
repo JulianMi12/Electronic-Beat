@@ -13,8 +13,8 @@ body {
 }
 
 #app-cover {
-    position: absolute;
-    bottom: 50%;
+    position: fixed;
+    bottom: 0;
     right: 0;
     left: 0;
     width: 100%;
@@ -328,6 +328,16 @@ body {
     z-index: 125;
 }
 
+.playlist h1 {
+    text-align: center;
+}
+
+.playlist ul li {
+    text-align: left;
+    list-style: none;
+    margin-top: 20px;
+}
+
 @media (min-width:402px) {
     #player-controls {
         margin: 0 5px 0 141px;
@@ -344,9 +354,6 @@ body {
     }
     #player-controls {
         margin-left: 15px;
-    }
-    #app-cover {
-        top: 84%;
     }
     #player-track {
         top: -92px;

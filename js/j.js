@@ -1,3 +1,69 @@
+var btn_1 = document.getElementById('div1');
+var btn_2 = document.getElementById('div2');
+
+function mostrarLista1() {
+    btn_1.style.display = 'inline';
+    btn_2.style.display = 'none';
+    btn_3.style.display = 'none';
+    btn_4.style.display = 'none';
+    btn_5.style.display = 'none';
+}
+
+function mostrarLista2() {
+    btn_1.style.display = 'none';
+    btn_2.style.display = 'inline';
+    btn_3.style.display = 'none';
+    btn_4.style.display = 'none';
+    btn_5.style.display = 'none';
+}
+
+function mostrarLista3() {
+    btn_1.style.display = 'none';
+    btn_2.style.display = 'none';
+    btn_3.style.display = 'inline';
+    btn_4.style.display = 'none';
+    btn_5.style.display = 'none';
+}
+
+function mostrarLista4() {
+    btn_1.style.display = 'none';
+    btn_2.style.display = 'none';
+    btn_3.style.display = 'none';
+    btn_4.style.display = 'inline';
+    btn_5.style.display = 'none';
+}
+
+function mostrarLista5() {
+    btn_1.style.display = 'none';
+    btn_2.style.display = 'none';
+    btn_3.style.display = 'none';
+    btn_4.style.display = 'none';
+    btn_5.style.display = 'inline';
+}
+
+
+$(function curr() {
+
+    $("#inputCurr").on('change', function() {
+
+        var selectValue = $(this).val();
+        switch (selectValue) {
+
+            case "1":
+                $(".m1").show();
+                $(".m2").hide();
+                break;
+
+            case "2":
+                $(".m1").hide();
+                $(".m2").show();
+                break;
+        }
+
+    }).change();
+
+});
+
 $(function() {
     var playerTrack = $("#player-track"),
         bgArtwork = $('#bg-artwork'),
