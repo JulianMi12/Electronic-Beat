@@ -209,7 +209,7 @@ body {
 .form-registro a:hover{
     color: white;
 }
-button{
+.btn-secondary{
     width:100px; 
     margin: -20px -50px; 
     position:relative;

@@ -79,9 +79,11 @@
     </div>
     <section class="form-registro">
         <h2>Contactenos</h2>
-        <input class="controles" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required maxlength="5">
-        <input class="controles" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-        <input class="controles" type="text" name="telefono" id="telefono" onkeypress="return solon(event)" placeholder="Ingrese su Telefono" required minlength="7" pattern="[z0-9]+">
+        
+        <form action="/action_page.php" method="get">
+        <input class="controles" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required minlength="5" oninvalid="alert('El nombre debe tener minimo 5 caracteres');">
+        <input class="controles" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required oninvalid="alert('Escriba correctamente el Correo');">
+        <input class="controles" type="text" name="telefono" id="telefono" onkeypress="return solon(event)" placeholder="Ingrese su Telefono" required minlength="7" oninvalid="alert('El Telefono debe tener minimo 7 numeros');">
         <script>
        function solon(e){
            key=e.keyCode || e.which;
@@ -100,8 +102,9 @@
            }
        }
         </script>
-        <textarea class="controles" name="texto" rows="9" cols="60" placeholder="Ingrese el Mensaje"required minlength="50" maxlength="200"></textarea>
-        <button type="button" class="btn btn-secondary">Enviar</button>
+        <textarea class="controles" name="texto" rows="9" cols="60" placeholder="Ingrese el Mensaje"required minlength="50" maxlength="200" oninvalid="alert('El mensaje debe ser de minimo 50 caracteres y maximo 200 caracteres');"></textarea>
+        <input class="btn btn-secondary" type="submit" value="Enviar" >
+    </form>
     </section>
     <br> 
     <br>
