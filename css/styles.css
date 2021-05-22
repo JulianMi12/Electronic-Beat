@@ -134,6 +134,10 @@ body {
     height: auto;
 }
 
+.lg {
+    width: 200px;
+}
+
 .imgs {
     margin-top: 4%;
     margin-bottom: 4%;
@@ -174,7 +178,8 @@ body {
         display: none;
     }
 }
-.form-registro{
+
+.form-registro {
     width: 700px;
     background-color: #375a7f;
     padding: 30px;
@@ -183,14 +188,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
-.form-registro h2{
+
+.form-registro h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
     margin-bottom: 20px;
     text-align: center;
     color: white;
 }
-.controles{
+
+.controles {
     width: 100%;
     background-color: white;
     padding: 10px;
@@ -200,20 +207,22 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
-.form-registro p{
+
+.form-registro p {
     height: 400px;
     text-align: center;
     font-size: 18px;
-
 }
-.form-registro a:hover{
+
+.form-registro a:hover {
     color: white;
 }
-.btn-secondary{
-    width:100px; 
-    margin: -20px -50px; 
-    position:relative;
-    top:50%; 
-    left:50%;
+
+.btn-secondary {
+    width: 100px;
+    margin: -20px -50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
     font-family: Arial, Helvetica, sans-serif;
-    }
+}
