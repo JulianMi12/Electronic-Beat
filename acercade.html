@@ -21,7 +21,7 @@
         <div class="center">
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container-fluid">
-                    <div class="divsubt"><a class="navbar-brand" href="#">ELECTRONIC BEAT</a></div>
+                    <div class="divsubt"><a class="navbar-brand" href="index.html">ELECTRONIC BEAT</a></div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -38,19 +38,19 @@
                                 </a>
                             </li>
                             <li class="nav-item me-auto">
-                                <a class="nav-link active" href="electronica.html">
+                                <a class="nav-link" href="electronica.html">
                                     <p>ELECTRONICA <i class="fas fa-compass"> </i></p>
-                                    <span class="visually-hidden">(current)</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="music.html">
+                                <a class="nav-link" href="musica.html">
                                     <p>MUSICA <i class="fas fa-headphones-alt"> </i></p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link active" href="acercade.html">
                                     <p>ACERCA DE <i class="fas fa-pencil-alt"> </i></p>
+                                    <span class="visually-hidden">(current)</span>
                                 </a>
                             </li>
                         </ul>
@@ -59,83 +59,88 @@
             </nav>
         </div>
     </header>
-
-    <div id="img"><img class="lg" src="images/Logo.png" alt="Imagen Logo"></div>
+    <div class="social">
+        <ul>
+            <li>
+                <a href="#" target="_blank" class="icon-facebook"></a>
+            </li>
+            <li>
+                <a href="#" target="_blank" class="icon-twitter"></a>
+            </li>
+            <li>
+                <a href="#" target="_blank" class="icon-instagram"></a>
+            </li>
+            <li>
+                <a href="#" target="_blank" class="icon-whatsapp"></a>
+            </li>
+            <li>
+                <a href="#" class="icon-mail2"></a>
+            </li>
+        </ul>
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-sm-12 col-md-11 t">
-                <p>ELECTRONIC BEAT, es una página de música electrónica, en la que encontrarás información sobre esta, ya sea su origen, su historia a través del tiempo, sus principales géneros, canciones, artistas, entre otra variedad de opciones.</p>
-                <p>Somo una página amante de la música electrónica y el cual le gusta compartir y dar conocer a esta. Creo esta página web con el fin de enseñar un poco más acerca de este género, su gran variedad de subgéneros y su amplia historia. </p>
-                <p>Por último, se quiere enseñar las diferencias de los diferentes subgéneros de la música electrónica, todo el mundo la llama solo electrónica, hay que comprender que existe el trance, techno, house, dubstep, hardcore, entre otros. Estos
-                    son los cinco principales subgéneros de la música electrónica, cada uno con unos bpm diferentes, muchos más lentos o muchos más rápidos.</p>
-                <p>Para mi es un honor y un placer, compartir con todos ustedes este gran y divertido mundo de mucha música.</p>
-                <p>Eectronic Beat</p>
-                <br>
+            <div class="col-md-3 space">
+                <div id="img">
+                    <center><img class="lg" src="images/Logo.png" alt="Imagen Logo"></center>
+                </div>
             </div>
+            <div class="col-sm-12 col-md-9 space">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-sm-12 col-md-11 t">
+                            <p>ELECTRONIC BEAT, es una página de música electrónica, en la que encontrarás información sobre esta, ya sea su origen, su historia a través del tiempo, sus principales géneros, canciones, artistas, entre otra variedad de opciones.</p>
+                            <p>Somo una página amante de la música electrónica y el cual le gusta compartir y dar conocer a esta. Creo esta página web con el fin de enseñar un poco más acerca de este género, su gran variedad de subgéneros y su amplia historia.
+                            </p>
+                            <p>Por último, se quiere enseñar las diferencias de los diferentes subgéneros de la música electrónica, todo el mundo la llama solo electrónica, hay que comprender que existe el trance, techno, house, dubstep, hardcore, entre
+                                otros. Estos son los cinco principales subgéneros de la música electrónica, cada uno con unos bpm diferentes, muchos más lentos o muchos más rápidos.</p>
+                            <p>Para mi es un honor y un placer, compartir con todos ustedes este gran y divertido mundo de mucha música.</p>
+                            <p>Eectronic Beat</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="form-registro">
+                <h2>Contactenos</h2>
+
+                <form action="/action_page.php" method="get">
+                    <input class="controles" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required minlength="5" oninvalid="alert('El Nombre debe tener minimo 5 caracteres');">
+                    <input class="controles" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required oninvalid="alert('Escriba correctamente el Correo');">
+                    <input class="controles" type="text" name="telefono" id="telefono" onkeypress="return solon(event)" placeholder="Ingrese su Telefono" required minlength="7" oninvalid="alert('El Telefono debe tener minimo 7 numeros');">
+                    <script>
+                        function solon(e) {
+                            key = e.keyCode || e.which;
+                            teclado = String.fromCharCode(key);
+                            numeros = "0123456789";
+                            especiales = "8-37-38-46";
+                            teclado_especial = false;
+                            for (var i in especiales) {
+                                if (key == especiales[i]) {
+                                    teclado_especial = true;
+
+                                }
+                            }
+                            if (numeros.indexOf(teclado) == -1 && !teclado_especial) {
+                                return false;
+                            }
+                        }
+                    </script>
+                    <textarea class="controles" name="texto" rows="9" cols="60" placeholder="Ingrese el Mensaje" required minlength="50" maxlength="200" oninvalid="alert('El Mensaje debe ser de minimo 50 caracteres y maximo 200 caracteres');"></textarea>
+                    <input class="btn btn-outline-primary" type="submit" value="Enviar">
+                </form>
+            </section>
         </div>
     </div>
-    <section class="form-registro">
-        <h2>Contactenos</h2>
-
-        <form action="/action_page.php" method="get">
-            <input class="controles" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required minlength="5" oninvalid="alert('El Nombre debe tener minimo 5 caracteres');">
-            <input class="controles" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required oninvalid="alert('Escriba correctamente el Correo');">
-            <input class="controles" type="text" name="telefono" id="telefono" onkeypress="return solon(event)" placeholder="Ingrese su Telefono" required minlength="7" oninvalid="alert('El Telefono debe tener minimo 7 numeros');">
-            <script>
-                function solon(e) {
-                    key = e.keyCode || e.which;
-                    teclado = String.fromCharCode(key);
-                    numeros = "0123456789";
-                    especiales = "8-37-38-46";
-                    teclado_especial = false;
-                    for (var i in especiales) {
-                        if (key == especiales[i]) {
-                            teclado_especial = true;
-
-                        }
-                    }
-                    if (numeros.indexOf(teclado) == -1 && !teclado_especial) {
-                        return false;
-                    }
-                }
-            </script>
-            <textarea class="controles" name="texto" rows="9" cols="60" placeholder="Ingrese el Mensaje" required minlength="50" maxlength="200" oninvalid="alert('El Mensaje debe ser de minimo 50 caracteres y maximo 200 caracteres');"></textarea>
-            <input class="btn btn-secondary" type="submit" value="Enviar">
-        </form>
-    </section>
-    <br>
-    <br>
 
     <footer class="py-5 bg-dark ">
         <div class="containerBlack ">
             <p class="m-0 text-center text-white ">Copyright &copy; Fundación Universitaria Konrad Lorenz 2021</p>
-            <p class="m-0 text-white ">CONTACTO</p>
-            <P class="m-0 text-white ">ELECTRONICBEAT@GMAIL.COM</P>
-            <P class="m-0 text-white ">BOGOTA, COLOMBIA</P>
-            <div class="social">
-                <ul>
-                    <li>
-                        <a href="http://www.facebook.com/falconmasters" target="_blank" class="icon-facebook"></a>
-                    </li>
-                    <li>
-                        <a href="http://www.twitter.com/falconmasters" target="_blank" class="icon-twitter"></a>
-                    </li>
-                    <li>
-                        <a href="http://www.googleplus.com/falconmasters" target="_blank" class="icon-instagram"></a>
-                    </li>
-                    <li>
-                        <a href="http://www.pinterest.com/falconmasters" target="_blank" class="icon-whatsapp"></a>
-                    </li>
-                    <li>
-                        <a href="mailto:contacto@falconmasters.com" class="icon-mail2"></a>
-                    </li>
-                </ul>
-            </div>
         </div>
-
-
     </footer>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/prismjs/prism.js" data-manual></script>
