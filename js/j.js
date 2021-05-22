@@ -82,10 +82,10 @@ $(function() {
         seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0,
         buffInterval = null,
         tFlag = false,
-        albums = ['Dawn', 'Me & You', 'Electro Boy', 'Home', 'Proxy (Original Mix)'],
-        trackNames = ['Skylike - Dawn', 'Alex Skrindo - Me & You', 'Kaaze - Electro Boy', 'Jordan Schor - Home', 'Martin Garrix - Proxy'],
+        albums = ['Dancin', 'Hush Money', 'Ghosts N Stuff', 'Define', 'American Dream'],
+        trackNames = ['Aaron Smith - Dancin', 'Damien N-Drix - Hush Money', 'Deadmau5 feat. Rob Swire - Ghosts N Stuff', 'Dom Dolla & Go Freek - Define', 'Jakatta - American Dream'],
         albumArtworks = ['_1', '_2', '_3', '_4', '_5'],
-        trackUrl = ['https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/2.mp3', 'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/1.mp3', 'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/3.mp3', 'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3', 'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/5.mp3'],
+        trackUrl = ['musica/HOUSE/Aaron Smith - Dancin.mp3', 'musica/HOUSE/Damien N-Drix - Hush Money.mp3', 'musica/HOUSE/Deadmau5 feat. Rob Swire - Ghosts N Stuff.mp3', 'musica/HOUSE/Dom Dolla & Go Freek - Define.mp3', 'musica/HOUSE/Jakatta - American Dream.mp3'],
         playPreviousTrackButton = $('#play-previous'),
         playNextTrackButton = $('#play-next'),
         currIndex = -1;
