@@ -227,11 +227,14 @@ body {
     color: white;
 }
 
-.btn-secondary {
+.btn-outline-primary{
     width: 100px;
     margin: -20px -50px;
     position: relative;
     top: 50%;
     left: 50%;
     font-family: Arial, Helvetica, sans-serif;
+}
+textarea {
+    height: 150px;
 }
