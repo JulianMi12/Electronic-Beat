@@ -1,93 +1,27 @@
-var btn_1 = document.getElementById('div1');
-var btn_2 = document.getElementById('div2');
-
-function mostrarLista1() {
-    btn_1.style.display = 'inline';
-    btn_2.style.display = 'none';
-    btn_3.style.display = 'none';
-    btn_4.style.display = 'none';
-    btn_5.style.display = 'none';
-}
-
-function mostrarLista2() {
-    btn_1.style.display = 'none';
-    btn_2.style.display = 'inline';
-    btn_3.style.display = 'none';
-    btn_4.style.display = 'none';
-    btn_5.style.display = 'none';
-}
-
-function mostrarLista3() {
-    btn_1.style.display = 'none';
-    btn_2.style.display = 'none';
-    btn_3.style.display = 'inline';
-    btn_4.style.display = 'none';
-    btn_5.style.display = 'none';
-}
-
-function mostrarLista4() {
-    btn_1.style.display = 'none';
-    btn_2.style.display = 'none';
-    btn_3.style.display = 'none';
-    btn_4.style.display = 'inline';
-    btn_5.style.display = 'none';
-}
-
-function mostrarLista5() {
-    btn_1.style.display = 'none';
-    btn_2.style.display = 'none';
-    btn_3.style.display = 'none';
-    btn_4.style.display = 'none';
-    btn_5.style.display = 'inline';
-}
-
-
-$(function curr() {
-
-    $("#inputCurr").on('change', function() {
-
-        var selectValue = $(this).val();
-        switch (selectValue) {
-
-            case "1":
-                $(".m1").show();
-                $(".m2").hide();
-                break;
-
-            case "2":
-                $(".m1").hide();
-                $(".m2").show();
-                break;
-        }
-
-    }).change();
-
-});
-
 $(function() {
-    var playerTrack = $("#player-track"),
-        bgArtwork = $('#bg-artwork'),
-        bgArtworkUrl, albumName = $('#album-name'),
-        trackName = $('#track-name'),
-        albumArt = $('#album-art'),
-        sArea = $('#s-area'),
-        seekBar = $('#seek-bar'),
-        trackTime = $('#track-time'),
-        insTime = $('#ins-time'),
-        sHover = $('#s-hover'),
-        playPauseButton = $("#play-pause-button"),
+    var playerTrack = $("#player-track1"),
+        bgArtwork = $('#bg-artwork1'),
+        bgArtworkUrl, albumName = $('#album-name1'),
+        trackName = $('#track-name1'),
+        albumArt = $('#album-art1'),
+        sArea = $('#s-area1'),
+        seekBar = $('#seek-bar1'),
+        trackTime = $('#track-time1'),
+        insTime = $('#ins-time1'),
+        sHover = $('#s-hover1'),
+        playPauseButton = $("#play-pause-button1"),
         i = playPauseButton.find('i'),
-        tProgress = $('#current-time'),
-        tTime = $('#track-length'),
+        tProgress = $('#current-time1'),
+        tTime = $('#track-length1'),
         seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0,
         buffInterval = null,
         tFlag = false,
-        albums = ['Rubber Band Boiz', 'Goin In', '100s', 'Cinema', 'Riot', 'SURVIVAL', 'FALLING', 'The Wonky Song', 'Takin Over', 'Riddim Love Song', 'First Of The Year (Equinox)', 'Recess', 'Rock n Roll', 'Make It Bun Dem', 'TRY IT OUT', 'Bangarang', 'Pray For Riddim', 'Purple Dragons', ' Immunity', 'Resurrected'],
+        albums = ['Ahre', 'Goin In', '100s', 'Cinema', 'Riot', 'SURVIVAL', 'FALLING', 'The Wonky Song', 'Takin Over', 'Riddim Love Song', 'First Of The Year (Equinox)', 'Recess', 'Rock n Roll', 'Make It Bun Dem', 'TRY IT OUT', 'Bangarang', 'Pray For Riddim', 'Purple Dragons', ' Immunity', 'Resurrected'],
         trackNames = ['12th Planet & Bandlez - Rubber Band Boiz', 'Birdy Nam Nam - Goin In (Skrillex Goin Hard Mix)', 'Borgore - 100s', 'Cinema - Skrillex', 'Crankdat  Gammer  - Riot', 'MONXX  - SURVIVAL', 'MONXX - FALLING', 'Monxx & Walter Wilde - The Wonky Song', 'Nitti Gritti & Shaquille O Neal - Takin Over', 'Oddprophet - Riddim Love Song', 'Skrillex - First Of The Year (Equinox)', 'Skrillex  Kill The Noise  Recess Ft Fatman Scoop and Michael Angelakos Official Audio', 'Skrillex - Rock n Roll', 'Skrillex & Damian Jr. Gong Marley - Make It Bun Dem', 'SKRILLEX + ALVIN RISK - TRY IT OUT', 'Skrillex Ft. Sirah - Bangarang', 'Virtual Riot - Pray For Riddim', 'Virtual Riot - Purple Dragons', 'Zomboy - Immunity', 'Zomboy - Resurrected'],
-        albumArtworks = ['_1', '_2', '_3', '_4', '_5', '_6', '_7', '_8', '_9', '_10', '_11', '_12', '_13', '_14', '_15', '_16', '_17', '_18', '_19', '_20'],
+        albumArtworks = ['_01', '_02', '_03', '_04', '_05', '_06', '_07', '_08', '_09', '_010', '_011', '_012', '_013', '_014', '_015', '_016', '_017', '_018', '_019', '_020'],
         trackUrl = ['musica/DUBSTEP/12th Planet & Bandlez - Rubber Band Boiz.mp3', 'musica/DUBSTEP/Birdy Nam Nam - Goin In (Skrillex Goin Hard Mix).mp3', 'musica/DUBSTEP/Borgore - 100s.mp3', 'musica/DUBSTEP/Cinema - Skrillex.mp3', 'musica/DUBSTEP/Crankdat  Gammer  - Riot.mp3', 'musica/DUBSTEP/MONXX  - SURVIVAL.mp3', 'musica/DUBSTEP/MONXX - FALLING.mp3', 'musica/DUBSTEP/Monxx & Walter Wilde - The Wonky Song.mp3', 'musica/DUBSTEP/Nitti Gritti & Shaquille O Neal - Takin Over.mp3', 'musica/DUBSTEP/Oddprophet - Riddim Love Song', 'musica/DUBSTEP/Skrillex - First Of The Year (Equinox).mp3', 'musica/DUBSTEP/Skrillex  Kill The Noise  Recess Ft Fatman Scoop and Michael Angelakos Official Audio.mp3', 'musica/DUBSTEP/Skrillex - Rock n Roll.mp3', 'musica/DUBSTEP/Skrillex & Damian Jr. Gong Marley - Make It Bun Dem.mp3', 'musica/DUBSTEP/SKRILLEX + ALVIN RISK - TRY IT OUT.mp3', 'musica/DUBSTEP/Skrillex Ft. Sirah - Bangarang.mp3', 'musica/DUBSTEP/Virtual Riot - Pray For Riddim.mp3', 'musica/DUBSTEP/Virtual Riot - Purple Dragons.mp3', 'musica/DUBSTEP/Zomboy - Immunity.mp3', 'musica/DUBSTEP/Zomboy - Resurrected.mp3'],
-        playPreviousTrackButton = $('#play-previous'),
-        playNextTrackButton = $('#play-next'),
+        playPreviousTrackButton = $('#play-previous1'),
+        playNextTrackButton = $('#play-next1'),
         currIndex = -1;
 
     function playPause() {
