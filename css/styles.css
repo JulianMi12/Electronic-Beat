@@ -238,3 +238,11 @@ body {
 textarea {
     height: 150px;
 }
+
+.favoritos {
+    font-size: 50px;
+}
+
+.card-header f {
+    font-size: 50px;
+}
