@@ -13,7 +13,7 @@
     <title>Electronica</title>
 </head>
 
-<body>
+<body id="body">
     <header class="bg-primary">
         <div class="divtittle">
             <h1>ELECTRONIC BEAT</h1>
@@ -83,6 +83,11 @@
             </li>
         </ul>
     </div>
+    <br>
+    <button type="button" class="btn btn-primary" onclick="colorTitulos()">Color Titulos</button>   
+    <button type="button" class="btn btn-primary" onclick="colorContainer()">Color de Fondo</button>
+    <button type="button" class="btn btn-primary" onclick="oculMost()">Mostrar/Ocultar</button>
+       
     <div class="container">
         <div class="row">
             <div class="col-md-1"></div>
@@ -98,7 +103,7 @@
                     electrónica, era el tema musical de la serie de
                     televisión Doctor Who.</p>
                 <br>
-                <h1 class="origen ">HISTORIA MÚSICA ELECTRÓNICA</h1>
+                <h1 class="origen">HISTORIA MÚSICA ELECTRÓNICA</h1>
                 <br>
                 <p class="">Piense en la música electrónica temprana y usted probablemente imaginará los himnos de la
                     discoteca de finales de los años 70 y principios de los 80. Aunque la música electrónica no se hizo
@@ -120,7 +125,7 @@
                 <div class="imgs"><img src="images/Electronica/1.jpg" alt="Imagen 2 Prueba Sputnik" class="img-fluid">
                 </div>
                 <br>
-                <h1 class="origen ">SYNTHPOP Y MÚSICA DE DISCOTECA: AÑOS 70</h1>
+                <h1 class="origen">SYNTHPOP Y MÚSICA DE DISCOTECA: AÑOS 70</h1>
                 <p class="text ">Aunque los instrumentos electrónicos se usaban en la década de 1960, no fue hasta los
                     años setenta cuando la música electrónica entró en la corriente dominante. Bandas como Kraftwerk –
                     una banda icónica de la Alemania Occidental – presentó
@@ -161,7 +166,7 @@
                     danza como el trance y el techno. La creciente popularidad de los ordenadores domésticos como el
                     Atari ST introdujo la tecnología MIDI a
                     una amplia audiencia de productores.</p>
-                <h1 class="origen ">MÚSICA DE BAILE: AÑOS 90</h1>
+                <h1 class="origen">MÚSICA DE BAILE: AÑOS 90</h1>
                 <p class="text ">Los años setenta marcaron el comienzo de la música moderna bailable y los ochenta
                     marcaron su gran avance comercial, pero no fue hasta los noventa que la música electrónica creció
                     hasta convertirse en el género masivo que es hoy en día.</p>
@@ -296,8 +301,10 @@
     </footer>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/prismjs/prism.js" data-manual></script>
+    <script src="js/prism.js" data-manual></script>
     <script src="js/custom.js"></script>
+    <script src="js/f_colores.js"></script>
+
 </body>
 
 </html>
