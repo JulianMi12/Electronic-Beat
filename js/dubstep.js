@@ -1,234 +1,983 @@
-$(function() {
-    var playerTrack = $("#player-track1"),
-        bgArtwork = $('#bg-artwork1'),
-        bgArtworkUrl, albumName = $('#album-name1'),
-        trackName = $('#track-name1'),
-        albumArt = $('#album-art1'),
-        sArea = $('#s-area1'),
-        seekBar = $('#seek-bar1'),
-        trackTime = $('#track-time1'),
-        insTime = $('#ins-time1'),
-        sHover = $('#s-hover1'),
-        playPauseButton = $("#play-pause-button1"),
-        i = playPauseButton.find('i'),
-        tProgress = $('#current-time1'),
-        tTime = $('#track-length1'),
-        seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0,
-        buffInterval = null,
-        tFlag = false,
-        albums = ['Ahre', 'Goin In', '100s', 'Cinema', 'Riot', 'SURVIVAL', 'FALLING', 'The Wonky Song', 'Takin Over', 'Riddim Love Song', 'First Of The Year (Equinox)', 'Recess', 'Rock n Roll', 'Make It Bun Dem', 'TRY IT OUT', 'Bangarang', 'Pray For Riddim', 'Purple Dragons', ' Immunity', 'Resurrected'],
-        trackNames = ['12th Planet & Bandlez - Rubber Band Boiz', 'Birdy Nam Nam - Goin In (Skrillex Goin Hard Mix)', 'Borgore - 100s', 'Cinema - Skrillex', 'Crankdat  Gammer  - Riot', 'MONXX  - SURVIVAL', 'MONXX - FALLING', 'Monxx & Walter Wilde - The Wonky Song', 'Nitti Gritti & Shaquille O Neal - Takin Over', 'Oddprophet - Riddim Love Song', 'Skrillex - First Of The Year (Equinox)', 'Skrillex  Kill The Noise  Recess Ft Fatman Scoop and Michael Angelakos Official Audio', 'Skrillex - Rock n Roll', 'Skrillex & Damian Jr. Gong Marley - Make It Bun Dem', 'SKRILLEX + ALVIN RISK - TRY IT OUT', 'Skrillex Ft. Sirah - Bangarang', 'Virtual Riot - Pray For Riddim', 'Virtual Riot - Purple Dragons', 'Zomboy - Immunity', 'Zomboy - Resurrected'],
-        albumArtworks = ['_01', '_02', '_03', '_04', '_05', '_06', '_07', '_08', '_09', '_010', '_011', '_012', '_013', '_014', '_015', '_016', '_017', '_018', '_019', '_020'],
-        trackUrl = ['musica/DUBSTEP/12th Planet & Bandlez - Rubber Band Boiz.mp3', 'musica/DUBSTEP/Birdy Nam Nam - Goin In (Skrillex Goin Hard Mix).mp3', 'musica/DUBSTEP/Borgore - 100s.mp3', 'musica/DUBSTEP/Cinema - Skrillex.mp3', 'musica/DUBSTEP/Crankdat  Gammer  - Riot.mp3', 'musica/DUBSTEP/MONXX  - SURVIVAL.mp3', 'musica/DUBSTEP/MONXX - FALLING.mp3', 'musica/DUBSTEP/Monxx & Walter Wilde - The Wonky Song.mp3', 'musica/DUBSTEP/Nitti Gritti & Shaquille O Neal - Takin Over.mp3', 'musica/DUBSTEP/Oddprophet - Riddim Love Song', 'musica/DUBSTEP/Skrillex - First Of The Year (Equinox).mp3', 'musica/DUBSTEP/Skrillex  Kill The Noise  Recess Ft Fatman Scoop and Michael Angelakos Official Audio.mp3', 'musica/DUBSTEP/Skrillex - Rock n Roll.mp3', 'musica/DUBSTEP/Skrillex & Damian Jr. Gong Marley - Make It Bun Dem.mp3', 'musica/DUBSTEP/SKRILLEX + ALVIN RISK - TRY IT OUT.mp3', 'musica/DUBSTEP/Skrillex Ft. Sirah - Bangarang.mp3', 'musica/DUBSTEP/Virtual Riot - Pray For Riddim.mp3', 'musica/DUBSTEP/Virtual Riot - Purple Dragons.mp3', 'musica/DUBSTEP/Zomboy - Immunity.mp3', 'musica/DUBSTEP/Zomboy - Resurrected.mp3'],
-        playPreviousTrackButton = $('#play-previous1'),
-        playNextTrackButton = $('#play-next1'),
-        currIndex = -1;
+var d1 = document.getElementById("d1");
+var d2 = document.getElementById("d2");
+var d3 = document.getElementById("d3");
+var d4 = document.getElementById("d4");
+var d5 = document.getElementById("d5");
+var d6 = document.getElementById("d6");
+var d7 = document.getElementById("d7");
+var d8 = document.getElementById("d8");
+var d9 = document.getElementById("d9");
+var d10 = document.getElementById("d10");
+var d11 = document.getElementById("d11");
+var d12 = document.getElementById("d12");
+var d13 = document.getElementById("d13");
+var d14 = document.getElementById("d14");
+var d15 = document.getElementById("d15");
+var d16 = document.getElementById("d16");
+var d17 = document.getElementById("d17");
+var d18 = document.getElementById("d18");
+var d19 = document.getElementById("d19");
+var d20 = document.getElementById("d20");
+var icond1 = document.getElementById("icond1");
+var icond2 = document.getElementById("icond2");
+var icond3 = document.getElementById("icond3");
+var icond4 = document.getElementById("icond4");
+var icond5 = document.getElementById("icond5");
+var icond6 = document.getElementById("icond6");
+var icond7 = document.getElementById("icond7");
+var icond8 = document.getElementById("icond8");
+var icond9 = document.getElementById("icond9");
+var icond10 = document.getElementById("icond10");
+var icond11 = document.getElementById("icond11");
+var icond12 = document.getElementById("icond12");
+var icond13 = document.getElementById("icond13");
+var icond14 = document.getElementById("icond14");
+var icond15 = document.getElementById("icond15");
+var icond16 = document.getElementById("icond16");
+var icond17 = document.getElementById("icond17");
+var icond18 = document.getElementById("icond18");
+var icond19 = document.getElementById("icond19");
+var icond20 = document.getElementById("icond20");
 
-    function playPause() {
-        setTimeout(function() {
-            if (audio.paused) {
-                playerTrack.addClass('active');
-                albumArt.addClass('active');
-                checkBuffering();
-                i.attr('class', 'fas fa-pause');
-                audio.play();
-            } else {
-                playerTrack.removeClass('active');
-                albumArt.removeClass('active');
-                clearInterval(buffInterval);
-                albumArt.removeClass('buffering');
-                i.attr('class', 'fas fa-play');
-                audio.pause();
-            }
-        }, 300);
+icond1.onclick = function() {
+    if (d1.paused) {
+        d1.play();
+        icond1.src = "images/pause.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d1.pause();
+        icond1.src = "images/play.png";
     }
+}
 
-
-    function showHover(event) {
-        seekBarPos = sArea.offset();
-        seekT = event.clientX - seekBarPos.left;
-        seekLoc = audio.duration * (seekT / sArea.outerWidth());
-
-        sHover.width(seekT);
-
-        cM = seekLoc / 60;
-
-        ctMinutes = Math.floor(cM);
-        ctSeconds = Math.floor(seekLoc - ctMinutes * 60);
-
-        if ((ctMinutes < 0) || (ctSeconds < 0))
-            return;
-
-        if ((ctMinutes < 0) || (ctSeconds < 0))
-            return;
-
-        if (ctMinutes < 10)
-            ctMinutes = '0' + ctMinutes;
-        if (ctSeconds < 10)
-            ctSeconds = '0' + ctSeconds;
-
-        if (isNaN(ctMinutes) || isNaN(ctSeconds))
-            insTime.text('--:--');
-        else
-            insTime.text(ctMinutes + ':' + ctSeconds);
-
-        insTime.css({ 'left': seekT, 'margin-left': '-21px' }).fadeIn(0);
-
+icond2.onclick = function() {
+    if (d2.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.play();
+        icond2.src = "images/pause.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d2.pause();
+        icond2.src = "images/play.png";
     }
+}
 
-    function hideHover() {
-        sHover.width(0);
-        insTime.text('00:00').css({ 'left': '0px', 'margin-left': '0px' }).fadeOut(0);
+icond3.onclick = function() {
+    if (d3.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.play();
+        icond3.src = "images/pause.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d3.pause();
+        icond3.src = "images/play.png";
     }
-
-    function playFromClickedPos() {
-        audio.currentTime = seekLoc;
-        seekBar.width(seekT);
-        hideHover();
+}
+icond4.onclick = function() {
+    if (d4.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.play();
+        icond4.src = "images/pause.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d4.pause();
+        icond4.src = "images/play.png";
     }
-
-    function updateCurrTime() {
-        nTime = new Date();
-        nTime = nTime.getTime();
-
-        if (!tFlag) {
-            tFlag = true;
-            trackTime.addClass('active');
-        }
-
-        curMinutes = Math.floor(audio.currentTime / 60);
-        curSeconds = Math.floor(audio.currentTime - curMinutes * 60);
-
-        durMinutes = Math.floor(audio.duration / 60);
-        durSeconds = Math.floor(audio.duration - durMinutes * 60);
-
-        playProgress = (audio.currentTime / audio.duration) * 100;
-
-        if (curMinutes < 10)
-            curMinutes = '0' + curMinutes;
-        if (curSeconds < 10)
-            curSeconds = '0' + curSeconds;
-
-        if (durMinutes < 10)
-            durMinutes = '0' + durMinutes;
-        if (durSeconds < 10)
-            durSeconds = '0' + durSeconds;
-
-        if (isNaN(curMinutes) || isNaN(curSeconds))
-            tProgress.text('00:00');
-        else
-            tProgress.text(curMinutes + ':' + curSeconds);
-
-        if (isNaN(durMinutes) || isNaN(durSeconds))
-            tTime.text('00:00');
-        else
-            tTime.text(durMinutes + ':' + durSeconds);
-
-        if (isNaN(curMinutes) || isNaN(curSeconds) || isNaN(durMinutes) || isNaN(durSeconds))
-            trackTime.removeClass('active');
-        else
-            trackTime.addClass('active');
-
-
-        seekBar.width(playProgress + '%');
-
-        if (playProgress == 100) {
-            i.attr('class', 'fa fa-play');
-            seekBar.width(0);
-            tProgress.text('00:00');
-            albumArt.removeClass('buffering').removeClass('active');
-            clearInterval(buffInterval);
-        }
+}
+icond5.onclick = function() {
+    if (d5.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.play();
+        icond5.src = "images/pause.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d5.pause();
+        icond5.src = "images/play.png";
     }
-
-    function checkBuffering() {
-        clearInterval(buffInterval);
-        buffInterval = setInterval(function() {
-            if ((nTime == 0) || (bTime - nTime) > 1000)
-                albumArt.addClass('buffering');
-            else
-                albumArt.removeClass('buffering');
-
-            bTime = new Date();
-            bTime = bTime.getTime();
-
-        }, 100);
+}
+icond6.onclick = function() {
+    if (d6.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.play();
+        icond6.src = "images/pause.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d6.pause();
+        icond6.src = "images/play.png";
     }
-
-    function selectTrack(flag) {
-        if (flag == 0 || flag == 1)
-            ++currIndex;
-        else
-            --currIndex;
-
-        if ((currIndex > -1) && (currIndex < albumArtworks.length)) {
-            if (flag == 0)
-                i.attr('class', 'fa fa-play');
-            else {
-                albumArt.removeClass('buffering');
-                i.attr('class', 'fa fa-pause');
-            }
-
-            seekBar.width(0);
-            trackTime.removeClass('active');
-            tProgress.text('00:00');
-            tTime.text('00:00');
-
-            currAlbum = albums[currIndex];
-            currTrackName = trackNames[currIndex];
-            currArtwork = albumArtworks[currIndex];
-
-            audio.src = trackUrl[currIndex];
-
-            nTime = 0;
-            bTime = new Date();
-            bTime = bTime.getTime();
-
-            if (flag != 0) {
-                audio.play();
-                playerTrack.addClass('active');
-                albumArt.addClass('active');
-
-                clearInterval(buffInterval);
-                checkBuffering();
-            }
-
-            albumName.text(currAlbum);
-            trackName.text(currTrackName);
-            albumArt.find('img.active').removeClass('active');
-            $('#' + currArtwork).addClass('active');
-
-            bgArtworkUrl = $('#' + currArtwork).attr('src');
-
-            bgArtwork.css({ 'background-image': 'url(' + bgArtworkUrl + ')' });
-        } else {
-            if (flag == 0 || flag == 1)
-                --currIndex;
-            else
-                ++currIndex;
-        }
+}
+icond7.onclick = function() {
+    if (d7.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.play();
+        icond7.src = "images/pause.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d7.pause();
+        icond7.src = "images/play.png";
     }
-
-    function initPlayer() {
-        audio = new Audio();
-
-        selectTrack(0);
-
-        audio.loop = false;
-
-        playPauseButton.on('click', playPause);
-
-        sArea.mousemove(function(event) { showHover(event); });
-
-        sArea.mouseout(hideHover);
-
-        sArea.on('click', playFromClickedPos);
-
-        $(audio).on('timeupdate', updateCurrTime);
-
-        playPreviousTrackButton.on('click', function() { selectTrack(-1); });
-        playNextTrackButton.on('click', function() { selectTrack(1); });
+}
+icond8.onclick = function() {
+    if (d8.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.play();
+        icond8.src = "images/pause.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d8.pause();
+        icond8.src = "images/play.png";
     }
-
-    initPlayer();
-});
+}
+icond9.onclick = function() {
+    if (d9.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.play();
+        icond9.src = "images/pause.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d9.pause();
+        icond9.src = "images/play.png";
+    }
+}
+icond10.onclick = function() {
+    if (d10.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.play();
+        icond10.src = "images/pause.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d10.pause();
+        icond10.src = "images/play.png";
+    }
+}
+icond11.onclick = function() {
+    if (d11.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.play();
+        icond11.src = "images/pause.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d11.pause();
+        icond11.src = "images/play.png";
+    }
+}
+icond12.onclick = function() {
+    if (d12.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.play();
+        icond12.src = "images/pause.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d12.pause();
+        icond12.src = "images/play.png";
+    }
+}
+icond13.onclick = function() {
+    if (d13.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.play();
+        icond13.src = "images/pause.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d13.pause();
+        icond13.src = "images/play.png";
+    }
+}
+icond14.onclick = function() {
+    if (d14.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.play();
+        icond14.src = "images/pause.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d14.pause();
+        icond14.src = "images/play.png";
+    }
+}
+icond15.onclick = function() {
+    if (d15.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.play();
+        icond15.src = "images/pause.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d15.pause();
+        icond15.src = "images/play.png";
+    }
+}
+icond16.onclick = function() {
+    if (d16.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.play();
+        icond16.src = "images/pause.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d16.pause();
+        icond16.src = "images/play.png";
+    }
+}
+icond17.onclick = function() {
+    if (d17.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.play();
+        icond17.src = "images/pause.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d17.pause();
+        icond17.src = "images/play.png";
+    }
+}
+icond18.onclick = function() {
+    if (d18.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.play();
+        icond18.src = "images/pause.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d18.pause();
+        icond18.src = "images/play.png";
+    }
+}
+icond19.onclick = function() {
+    if (d19.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.play();
+        icond19.src = "images/pause.png";
+        d20.pause();
+        icond20.src = "images/play.png";
+    } else {
+        d19.pause();
+        icond19.src = "images/play.png";
+    }
+}
+icond20.onclick = function() {
+    if (d20.paused) {
+        d1.pause();
+        icond1.src = "images/play.png";
+        d2.pause();
+        icond2.src = "images/play.png";
+        d3.pause();
+        icond3.src = "images/play.png";
+        d4.pause();
+        icond4.src = "images/play.png";
+        d5.pause();
+        icond5.src = "images/play.png";
+        d6.pause();
+        icond6.src = "images/play.png";
+        d7.pause();
+        icond7.src = "images/play.png";
+        d8.pause();
+        icond8.src = "images/play.png";
+        d9.pause();
+        icond9.src = "images/play.png";
+        d10.pause();
+        icond10.src = "images/play.png";
+        d11.pause();
+        icond11.src = "images/play.png";
+        d12.pause();
+        icond12.src = "images/play.png";
+        d13.pause();
+        icond13.src = "images/play.png";
+        d14.pause();
+        icond14.src = "images/play.png";
+        d15.pause();
+        icond15.src = "images/play.png";
+        d16.pause();
+        icond16.src = "images/play.png";
+        d17.pause();
+        icond17.src = "images/play.png";
+        d18.pause();
+        icond18.src = "images/play.png";
+        d19.pause();
+        icond19.src = "images/play.png";
+        d20.play();
+        icond20.src = "images/pause.png";
+    } else {
+        d20.pause();
+        icond20.src = "images/play.png";
+    }
+}

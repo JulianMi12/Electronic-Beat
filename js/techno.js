@@ -1,300 +1,983 @@
-var btn_1 = document.getElementById('div1');
-var btn_2 = document.getElementById('div2');
+var t1 = document.getElementById("t1");
+var t2 = document.getElementById("t2");
+var t3 = document.getElementById("t3");
+var t4 = document.getElementById("t4");
+var t5 = document.getElementById("t5");
+var t6 = document.getElementById("t6");
+var t7 = document.getElementById("t7");
+var t8 = document.getElementById("t8");
+var t9 = document.getElementById("t9");
+var t10 = document.getElementById("t10");
+var t11 = document.getElementById("t11");
+var t12 = document.getElementById("t12");
+var t13 = document.getElementById("t13");
+var t14 = document.getElementById("t14");
+var t15 = document.getElementById("t15");
+var t16 = document.getElementById("t16");
+var t17 = document.getElementById("t17");
+var t18 = document.getElementById("t18");
+var t19 = document.getElementById("t19");
+var t20 = document.getElementById("t20");
+var icont1 = document.getElementById("icont1");
+var icont2 = document.getElementById("icont2");
+var icont3 = document.getElementById("icont3");
+var icont4 = document.getElementById("icont4");
+var icont5 = document.getElementById("icont5");
+var icont6 = document.getElementById("icont6");
+var icont7 = document.getElementById("icont7");
+var icont8 = document.getElementById("icont8");
+var icont9 = document.getElementById("icont9");
+var icont10 = document.getElementById("icont10");
+var icont11 = document.getElementById("icont11");
+var icont12 = document.getElementById("icont12");
+var icont13 = document.getElementById("icont13");
+var icont14 = document.getElementById("icont14");
+var icont15 = document.getElementById("icont15");
+var icont16 = document.getElementById("icont16");
+var icont17 = document.getElementById("icont17");
+var icont18 = document.getElementById("icont18");
+var icont19 = document.getElementById("icont19");
+var icont20 = document.getElementById("icont20");
 
-function mostrarLista1() {
-    btn_1.style.display = 'inline';
-    btn_2.style.display = 'none';
-    btn_3.style.display = 'none';
-    btn_4.style.display = 'none';
-    btn_5.style.display = 'none';
+icont1.onclick = function() {
+    if (t1.paused) {
+        t1.play();
+        icont1.src = "images/pause.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t1.pause();
+        icont1.src = "images/play.png";
+    }
 }
 
-function mostrarLista2() {
-    btn_1.style.display = 'none';
-    btn_2.style.display = 'inline';
-    btn_3.style.display = 'none';
-    btn_4.style.display = 'none';
-    btn_5.style.display = 'none';
+icont2.onclick = function() {
+    if (t2.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.play();
+        icont2.src = "images/pause.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t2.pause();
+        icont2.src = "images/play.png";
+    }
 }
 
-function mostrarLista3() {
-    btn_1.style.display = 'none';
-    btn_2.style.display = 'none';
-    btn_3.style.display = 'inline';
-    btn_4.style.display = 'none';
-    btn_5.style.display = 'none';
+icont3.onclick = function() {
+    if (t3.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.play();
+        icont3.src = "images/pause.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t3.pause();
+        icont3.src = "images/play.png";
+    }
 }
-
-function mostrarLista4() {
-    btn_1.style.display = 'none';
-    btn_2.style.display = 'none';
-    btn_3.style.display = 'none';
-    btn_4.style.display = 'inline';
-    btn_5.style.display = 'none';
+icont4.onclick = function() {
+    if (t4.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.play();
+        icont4.src = "images/pause.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t4.pause();
+        icont4.src = "images/play.png";
+    }
 }
-
-function mostrarLista5() {
-    btn_1.style.display = 'none';
-    btn_2.style.display = 'none';
-    btn_3.style.display = 'none';
-    btn_4.style.display = 'none';
-    btn_5.style.display = 'inline';
+icont5.onclick = function() {
+    if (t5.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.play();
+        icont5.src = "images/pause.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t5.pause();
+        icont5.src = "images/play.png";
+    }
 }
-
-
-$(function curr() {
-
-    $("#inputCurr").on('change', function() {
-
-        var selectValue = $(this).val();
-        switch (selectValue) {
-
-            case "1":
-                $(".m1").show();
-                $(".m2").hide();
-                break;
-
-            case "2":
-                $(".m1").hide();
-                $(".m2").show();
-                break;
-        }
-
-    }).change();
-
-});
-
-$(function() {
-    var playerTrack = $("#player-track"),
-        bgArtwork = $('#bg-artwork'),
-        bgArtworkUrl, albumName = $('#album-name'),
-        trackName = $('#track-name'),
-        albumArt = $('#album-art'),
-        sArea = $('#s-area'),
-        seekBar = $('#seek-bar'),
-        trackTime = $('#track-time'),
-        insTime = $('#ins-time'),
-        sHover = $('#s-hover'),
-        playPauseButton = $("#play-pause-button"),
-        i = playPauseButton.find('i'),
-        tProgress = $('#current-time'),
-        tTime = $('#track-length'),
-        seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0,
-        buffInterval = null,
-        tFlag = false,
-        albums = ['X0003000X [NTNLTD001X]', 'Your Mind', 'Space Date', 'Hypnotized', 'The Acid', 'Purple Noise', 'Calypso', 'Sgadi Li Mi', 'Hey Hey Hey', 'meet her at the Loveparade', 'Opus', 'Losing It', 'What Is Love', 'Hanging Tree', 'Blue Monday', 'Look What Your Love Has Done To Me (Amelie Lens Remix)', 'The Yard Man', 'Hey Boy Hey Girl', 'Later Bitches', 'Transition (David Temessi Remix)'],
-        trackNames = ['999999999 - X0003000X [NTNLTD001X]', 'Adam Beyer & Bart Skils - Your Mind', 'Adam Beyer, Layton Giordani & Green Velvet - Space Date', 'Amelie Lens - Hypnotized', 'ASYS - The Acid', 'Boris Brejcha - Purple Noise', 'Carl Cox - Calypso', 'Charlotte de Witte - Sgadi Li Mi', 'Chemical Surf - Hey Hey Hey', 'Da Hool - meet her at the Loveparade', 'Eric Prydz - Opus', 'FISHER - Losing It', 'Haddaway - What Is Love', 'Michael Bibi - Hanging Tree', 'New Order - Blue Monday', 'Perc - Look What Your Love Has Done To Me (Amelie Lens Remix)', 'SRVD - The Yard Man', 'The Chemical Brothers - Hey Boy Hey Girl', 'The Prince Karma - Later Bitches', 'Uncertain - Transition (David Temessi Remix)'],
-        albumArtworks = ['_1', '_2', '_3', '_4', '_5', '_6', '_7', '_8', '_9', '_10', '_11', '_12', '_13', '_14', '_15', '_16', '_17', '_18', '_19', '_20'],
-        trackUrl = ['musica/TECHNO/999999999 - X0003000X [NTNLTD001X].mp3', 'musica/TECHNO/Adam Beyer & Bart Skils - Your Mind.mp3', 'musica/TECHNO/Adam Beyer, Layton Giordani & Green Velvet - Space Date.mp3', 'musica/TECHNO/Amelie Lens - Hypnotized.mp3', 'musica/TECHNO/ASYS - The Acid.mp3', 'musica/TECHNO/Boris Brejcha - Purple Noise.mp3', 'musica/TECHNO/Carl Cox - Calypso.mp3', 'musica/TECHNO/Charlotte de Witte - Sgadi Li Mi.mp3', 'musica/TECHNO/Chemical Surf - Hey Hey Hey.mp3', 'musica/TECHNO/Da Hool - meet her at the Loveparade', 'musica/TECHNO/Eric Prydz - Opus.mp3', 'musica/TECHNO/FISHER - Losing It.mp3', 'musica/TECHNO/Haddaway - What Is Love.mp3', 'musica/TECHNO/Michael Bibi - Hanging Tree.mp3', 'musica/TECHNO/New Order - Blue Monday.mp3', 'musica/TECHNO/Perc - Look What Your Love Has Done To Me (Amelie Lens Remix).mp3', 'musica/TECHNO/SRVD - The Yard Man.mp3', 'musica/TECHNO/The Chemical Brothers - Hey Boy Hey Girl.mp3', 'musica/TECHNO/The Prince Karma - Later Bitches.mp3', 'musica/TECHNO/Uncertain - Transition (David Temessi Remix).mp3'],
-        playPreviousTrackButton = $('#play-previous'),
-        playNextTrackButton = $('#play-next'),
-        currIndex = -1;
-
-    function playPause() {
-        setTimeout(function() {
-            if (audio.paused) {
-                playerTrack.addClass('active');
-                albumArt.addClass('active');
-                checkBuffering();
-                i.attr('class', 'fas fa-pause');
-                audio.play();
-            } else {
-                playerTrack.removeClass('active');
-                albumArt.removeClass('active');
-                clearInterval(buffInterval);
-                albumArt.removeClass('buffering');
-                i.attr('class', 'fas fa-play');
-                audio.pause();
-            }
-        }, 300);
+icont6.onclick = function() {
+    if (t6.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.play();
+        icont6.src = "images/pause.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t6.pause();
+        icont6.src = "images/play.png";
     }
-
-
-    function showHover(event) {
-        seekBarPos = sArea.offset();
-        seekT = event.clientX - seekBarPos.left;
-        seekLoc = audio.duration * (seekT / sArea.outerWidth());
-
-        sHover.width(seekT);
-
-        cM = seekLoc / 60;
-
-        ctMinutes = Math.floor(cM);
-        ctSeconds = Math.floor(seekLoc - ctMinutes * 60);
-
-        if ((ctMinutes < 0) || (ctSeconds < 0))
-            return;
-
-        if ((ctMinutes < 0) || (ctSeconds < 0))
-            return;
-
-        if (ctMinutes < 10)
-            ctMinutes = '0' + ctMinutes;
-        if (ctSeconds < 10)
-            ctSeconds = '0' + ctSeconds;
-
-        if (isNaN(ctMinutes) || isNaN(ctSeconds))
-            insTime.text('--:--');
-        else
-            insTime.text(ctMinutes + ':' + ctSeconds);
-
-        insTime.css({ 'left': seekT, 'margin-left': '-21px' }).fadeIn(0);
-
+}
+icont7.onclick = function() {
+    if (t7.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.play();
+        icont7.src = "images/pause.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t7.pause();
+        icont7.src = "images/play.png";
     }
-
-    function hideHover() {
-        sHover.width(0);
-        insTime.text('00:00').css({ 'left': '0px', 'margin-left': '0px' }).fadeOut(0);
+}
+icont8.onclick = function() {
+    if (t8.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.play();
+        icont8.src = "images/pause.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t8.pause();
+        icont8.src = "images/play.png";
     }
-
-    function playFromClickedPos() {
-        audio.currentTime = seekLoc;
-        seekBar.width(seekT);
-        hideHover();
+}
+icont9.onclick = function() {
+    if (t9.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.play();
+        icont9.src = "images/pause.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t9.pause();
+        icont9.src = "images/play.png";
     }
-
-    function updateCurrTime() {
-        nTime = new Date();
-        nTime = nTime.getTime();
-
-        if (!tFlag) {
-            tFlag = true;
-            trackTime.addClass('active');
-        }
-
-        curMinutes = Math.floor(audio.currentTime / 60);
-        curSeconds = Math.floor(audio.currentTime - curMinutes * 60);
-
-        durMinutes = Math.floor(audio.duration / 60);
-        durSeconds = Math.floor(audio.duration - durMinutes * 60);
-
-        playProgress = (audio.currentTime / audio.duration) * 100;
-
-        if (curMinutes < 10)
-            curMinutes = '0' + curMinutes;
-        if (curSeconds < 10)
-            curSeconds = '0' + curSeconds;
-
-        if (durMinutes < 10)
-            durMinutes = '0' + durMinutes;
-        if (durSeconds < 10)
-            durSeconds = '0' + durSeconds;
-
-        if (isNaN(curMinutes) || isNaN(curSeconds))
-            tProgress.text('00:00');
-        else
-            tProgress.text(curMinutes + ':' + curSeconds);
-
-        if (isNaN(durMinutes) || isNaN(durSeconds))
-            tTime.text('00:00');
-        else
-            tTime.text(durMinutes + ':' + durSeconds);
-
-        if (isNaN(curMinutes) || isNaN(curSeconds) || isNaN(durMinutes) || isNaN(durSeconds))
-            trackTime.removeClass('active');
-        else
-            trackTime.addClass('active');
-
-
-        seekBar.width(playProgress + '%');
-
-        if (playProgress == 100) {
-            i.attr('class', 'fa fa-play');
-            seekBar.width(0);
-            tProgress.text('00:00');
-            albumArt.removeClass('buffering').removeClass('active');
-            clearInterval(buffInterval);
-        }
+}
+icont10.onclick = function() {
+    if (t10.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.play();
+        icont10.src = "images/pause.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t10.pause();
+        icont10.src = "images/play.png";
     }
-
-    function checkBuffering() {
-        clearInterval(buffInterval);
-        buffInterval = setInterval(function() {
-            if ((nTime == 0) || (bTime - nTime) > 1000)
-                albumArt.addClass('buffering');
-            else
-                albumArt.removeClass('buffering');
-
-            bTime = new Date();
-            bTime = bTime.getTime();
-
-        }, 100);
+}
+icont11.onclick = function() {
+    if (t11.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.play();
+        icont11.src = "images/pause.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t11.pause();
+        icont11.src = "images/play.png";
     }
-
-    function selectTrack(flag) {
-        if (flag == 0 || flag == 1)
-            ++currIndex;
-        else
-            --currIndex;
-
-        if ((currIndex > -1) && (currIndex < albumArtworks.length)) {
-            if (flag == 0)
-                i.attr('class', 'fa fa-play');
-            else {
-                albumArt.removeClass('buffering');
-                i.attr('class', 'fa fa-pause');
-            }
-
-            seekBar.width(0);
-            trackTime.removeClass('active');
-            tProgress.text('00:00');
-            tTime.text('00:00');
-
-            currAlbum = albums[currIndex];
-            currTrackName = trackNames[currIndex];
-            currArtwork = albumArtworks[currIndex];
-
-            audio.src = trackUrl[currIndex];
-
-            nTime = 0;
-            bTime = new Date();
-            bTime = bTime.getTime();
-
-            if (flag != 0) {
-                audio.play();
-                playerTrack.addClass('active');
-                albumArt.addClass('active');
-
-                clearInterval(buffInterval);
-                checkBuffering();
-            }
-
-            albumName.text(currAlbum);
-            trackName.text(currTrackName);
-            albumArt.find('img.active').removeClass('active');
-            $('#' + currArtwork).addClass('active');
-
-            bgArtworkUrl = $('#' + currArtwork).attr('src');
-
-            bgArtwork.css({ 'background-image': 'url(' + bgArtworkUrl + ')' });
-        } else {
-            if (flag == 0 || flag == 1)
-                --currIndex;
-            else
-                ++currIndex;
-        }
+}
+icont12.onclick = function() {
+    if (t12.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.play();
+        icont12.src = "images/pause.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t12.pause();
+        icont12.src = "images/play.png";
     }
-
-    function initPlayer() {
-        audio = new Audio();
-
-        selectTrack(0);
-
-        audio.loop = false;
-
-        playPauseButton.on('click', playPause);
-
-        sArea.mousemove(function(event) { showHover(event); });
-
-        sArea.mouseout(hideHover);
-
-        sArea.on('click', playFromClickedPos);
-
-        $(audio).on('timeupdate', updateCurrTime);
-
-        playPreviousTrackButton.on('click', function() { selectTrack(-1); });
-        playNextTrackButton.on('click', function() { selectTrack(1); });
+}
+icont13.onclick = function() {
+    if (t13.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.play();
+        icont13.src = "images/pause.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t13.pause();
+        icont13.src = "images/play.png";
     }
-
-    initPlayer();
-});
+}
+icont14.onclick = function() {
+    if (t14.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.play();
+        icont14.src = "images/pause.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t14.pause();
+        icont14.src = "images/play.png";
+    }
+}
+icont15.onclick = function() {
+    if (t15.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.play();
+        icont15.src = "images/pause.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t15.pause();
+        icont15.src = "images/play.png";
+    }
+}
+icont16.onclick = function() {
+    if (t16.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.play();
+        icont16.src = "images/pause.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t16.pause();
+        icont16.src = "images/play.png";
+    }
+}
+icont17.onclick = function() {
+    if (t17.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.play();
+        icont17.src = "images/pause.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t17.pause();
+        icont17.src = "images/play.png";
+    }
+}
+icont18.onclick = function() {
+    if (t18.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.play();
+        icont18.src = "images/pause.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t18.pause();
+        icont18.src = "images/play.png";
+    }
+}
+icont19.onclick = function() {
+    if (t19.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.play();
+        icont19.src = "images/pause.png";
+        t20.pause();
+        icont20.src = "images/play.png";
+    } else {
+        t19.pause();
+        icont19.src = "images/play.png";
+    }
+}
+icont20.onclick = function() {
+    if (t20.paused) {
+        t1.pause();
+        icont1.src = "images/play.png";
+        t2.pause();
+        icont2.src = "images/play.png";
+        t3.pause();
+        icont3.src = "images/play.png";
+        t4.pause();
+        icont4.src = "images/play.png";
+        t5.pause();
+        icont5.src = "images/play.png";
+        t6.pause();
+        icont6.src = "images/play.png";
+        t7.pause();
+        icont7.src = "images/play.png";
+        t8.pause();
+        icont8.src = "images/play.png";
+        t9.pause();
+        icont9.src = "images/play.png";
+        t10.pause();
+        icont10.src = "images/play.png";
+        t11.pause();
+        icont11.src = "images/play.png";
+        t12.pause();
+        icont12.src = "images/play.png";
+        t13.pause();
+        icont13.src = "images/play.png";
+        t14.pause();
+        icont14.src = "images/play.png";
+        t15.pause();
+        icont15.src = "images/play.png";
+        t16.pause();
+        icont16.src = "images/play.png";
+        t17.pause();
+        icont17.src = "images/play.png";
+        t18.pause();
+        icont18.src = "images/play.png";
+        t19.pause();
+        icont19.src = "images/play.png";
+        t20.play();
+        icont20.src = "images/pause.png";
+    } else {
+        t20.pause();
+        icont20.src = "images/play.png";
+    }
+}
