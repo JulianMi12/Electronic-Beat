@@ -13,7 +13,7 @@
     <title>Electronica</title>
 </head>
 
-<body>
+<body id="body">
     <header class="bg-primary">
         <div class="divtittle">
             <h1>ELECTRONIC BEAT</h1>
@@ -83,6 +83,11 @@
             </li>
         </ul>
     </div>
+    <br>
+    <button type="button" class="btn btn-primary" onclick="colorTitulos()">Color Titulos</button>   
+    <button type="button" class="btn btn-primary" onclick="colorContainer()">Color de Fondo</button>
+    <button type="button" class="btn btn-primary" onclick="oculMost()">Mostrar/Ocultar</button>
+       
     <div class="container">
         <div class="row">
             <div class="col-md-1"></div>
@@ -90,7 +95,7 @@
                 <br>
                 <h1 class="origen">ORIGEN MÚSICA ELECTRÓNICA</h1>
                 <br>
-                <p>La música electrónica nace a final del siglo XIX y a inicios del siglo XX. El primer dispositivo en
+                <p class="text">La música electrónica nace a final del siglo XIX y a inicios del siglo XX. El primer dispositivo en
                     grabar un sonido electrónico fue el fonoautógrafo, patentado en el año 1857 por Édouard-Léon Scott
                     de Martinville. Ya en el año 1960, esta
                     música se empieza a comercializar de manera intensa en el mundo, con la accesibilidad del
@@ -98,19 +103,19 @@
                     electrónica, era el tema musical de la serie de
                     televisión Doctor Who.</p>
                 <br>
-                <h1 class="origen ">HISTORIA MÚSICA ELECTRÓNICA</h1>
+                <h1 class="origen3">HISTORIA MÚSICA ELECTRÓNICA</h1>
                 <br>
-                <p class="">Piense en la música electrónica temprana y usted probablemente imaginará los himnos de la
+                <p class="text2" >Piense en la música electrónica temprana y usted probablemente imaginará los himnos de la
                     discoteca de finales de los años 70 y principios de los 80. Aunque la música electrónica no se hizo
                     popular hasta mediados de los años setenta, los
                     artistas ya utilizaban instrumentos electrónicos en la década de los sesenta.</p>
-                <p> Bandas de rock progresivas como Pink Floyd hicieron del sintetizador Moog uno de los aspectos más
+                <p class="text3 "> Bandas de rock progresivas como Pink Floyd hicieron del sintetizador Moog uno de los aspectos más
                     importantes de su sonido. Bandas de pop rock como The Beatles también comenzaron a incorporar
                     teclados y sintetizadores en algunas de sus
                     canciones experimentales.</p>
-                <p> Al mismo tiempo, los compositores utilizaban nuevos instrumentos como el Theremin en su trabajo,
+                <p class="text4 "> Al mismo tiempo, los compositores utilizaban nuevos instrumentos como el Theremin en su trabajo,
                     especialmente en la industria cinematográfica.</p>
-                <p> Ya desde los años 50, en diversos centros de investigación se experimentaba para crear nuevos
+                <p class="text5"> Ya desde los años 50, en diversos centros de investigación se experimentaba para crear nuevos
                     sonidos a partir de sintetizadores u otros dispositivos que ejercieran un efecto similar. A partir
                     de los años 60, fue lanzado el sintetizador
                     comercial Moog, es considerado el primer instrumento icónico de la música electrónica. Además,
@@ -120,8 +125,8 @@
                 <div class="imgs"><img src="images/Electronica/1.jpg" alt="Imagen 2 Prueba Sputnik" class="img-fluid">
                 </div>
                 <br>
-                <h1 class="origen ">SYNTHPOP Y MÚSICA DE DISCOTECA: AÑOS 70</h1>
-                <p class="text ">Aunque los instrumentos electrónicos se usaban en la década de 1960, no fue hasta los
+                <h1 class="origen4">SYNTHPOP Y MÚSICA DE DISCOTECA: AÑOS 70</h1>
+                <p >Aunque los instrumentos electrónicos se usaban en la década de 1960, no fue hasta los
                     años setenta cuando la música electrónica entró en la corriente dominante. Bandas como Kraftwerk –
                     una banda icónica de la Alemania Occidental – presentó
                     el sonido electrónico a un público más amplio.</p>
@@ -142,7 +147,7 @@
                     fue hasta los años 80 cuando el sintetizador,
                     la danza y otros géneros surgieron por sí solos.</p>
                 <br>
-                <h1 class="origen ">LA ERA DE LA SÍNTESIS: AÑOS 80</h1>
+                <h1 class="origen5 ">LA ERA DE LA SÍNTESIS: AÑOS 80</h1>
                 <p class="text ">La era del glitz, el glamour y el exceso fue un gran momento para la música
                     electrónica, El house, el techno y el electro surgieron en los 80, una época marcada también por el
                     synthpop, un subgénero que fusiona el pop con la electrónica
@@ -161,7 +166,7 @@
                     danza como el trance y el techno. La creciente popularidad de los ordenadores domésticos como el
                     Atari ST introdujo la tecnología MIDI a
                     una amplia audiencia de productores.</p>
-                <h1 class="origen ">MÚSICA DE BAILE: AÑOS 90</h1>
+                <h1 class="origen6">MÚSICA DE BAILE: AÑOS 90</h1>
                 <p class="text ">Los años setenta marcaron el comienzo de la música moderna bailable y los ochenta
                     marcaron su gran avance comercial, pero no fue hasta los noventa que la música electrónica creció
                     hasta convertirse en el género masivo que es hoy en día.</p>
@@ -185,7 +190,7 @@
                 <div class="imgs"><img src="images/Electronica/2.jpg" alt="Imagen 2 Prueba Sputnik" class="img-fluid">
                 </div>
                 <br>
-                <h1 class="origen">LA ERA DEL EDM: 2000 A LA ACTUALIDAD</h1>
+                <h1 class="origen7">LA ERA DEL EDM: 2000 A LA ACTUALIDAD</h1>
                 <p>Desde el año 2000, la música electrónica de baile (EDM) ha pasado de ser un género popular a una
                     parte influyente de toda la música convencional. Hoy en día, artistas electrónicos icónicos como
                     Tiësto y David Guetta han trabajado con artistas</p>
@@ -296,8 +301,10 @@
     </footer>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/prismjs/prism.js" data-manual></script>
+    <script src="js/prism.js" data-manual></script>
     <script src="js/custom.js"></script>
+    <script src="js/f_colores.js"></script>
+
 </body>
 
 </html>
