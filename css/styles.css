@@ -330,6 +330,37 @@ textarea {
     color: #375a7f;
 }
 
+.btn-play-2 {
+    width: 150px;
+    display: inline-block;
+    background: #fff;
+    text-decoration: none;
+    color: #375a7f;
+    border: 2px solid #fff;
+    transition: background 0.5s;
+}
+
+.btn-play-2:hover {
+    background: #375a7f;
+    color: #fff;
+}
+
+.btn-play-3 {
+    width: 200px;
+    display: inline-block;
+    background: #375a7f;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    transition: background 0.5s;
+}
+
+.btn-play-3:hover {
+    background: #fff;
+    color: #375a7f;
+    border: 2px solid #375a7f;
+}
+
 @media (min-width:1100px) {
     .songs {
         padding-left: 2%;
