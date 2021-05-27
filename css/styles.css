@@ -288,9 +288,9 @@ textarea {
 .btn-primary {
     width: 200px;
     position: relative;
-    display:block;
-  margin-left: auto;
-  margin-right: auto;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
     font-family: Arial, Helvetica, sans-serif;
 }
 
